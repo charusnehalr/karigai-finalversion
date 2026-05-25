@@ -54,13 +54,7 @@ main {
   box-sizing: border-box;
 }
 
-@media (pointer: fine) {
-  *,
-  *::before,
-  *::after {
-    cursor: none !important;
-  }
-}
+
 
 * {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
@@ -115,47 +109,56 @@ body.cursor-click .custom-cursor-ring {
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
 }
 
 @keyframes pulse-star {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
 }
 
 @keyframes sparkle {
+
   0%,
   100% {
     transform: scale(1) rotate(0deg);
   }
+
   50% {
     transform: scale(1.2) rotate(12deg);
   }
 }
 
 @keyframes bounce-dot {
+
   0%,
   60%,
   100% {
     transform: translateY(0);
   }
+
   30% {
     transform: translateY(-6px);
   }
 }
 
 @keyframes guest-shimmer {
+
   0%,
   100% {
     box-shadow: inset 0 0 0 rgb(250 246 239 / 0);
   }
+
   50% {
     box-shadow: inset 0 0 28px rgb(250 246 239 / 0.08);
   }
@@ -165,9 +168,11 @@ body.cursor-click .custom-cursor-ring {
   0% {
     box-shadow: 0 0 0 0 rgb(184 112 79 / 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 8px rgb(184 112 79 / 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgb(184 112 79 / 0);
   }
@@ -196,10 +201,12 @@ body.cursor-click .custom-cursor-ring {
 }
 
 @keyframes stream-cursor-blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
