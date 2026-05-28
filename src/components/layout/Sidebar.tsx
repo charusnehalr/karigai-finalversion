@@ -13,6 +13,7 @@ import {
   Moon,
   Shield,
   SlidersHorizontal,
+  Sparkles,
   TrendingUp,
   User,
   UtensilsCrossed,
@@ -36,6 +37,7 @@ type NavItem = {
 function primaryItems(setupProgress: number | null): NavItem[] {
   return [
     { label: "Dashboard", href: "/app/dashboard", icon: LayoutDashboard },
+    { label: "Today's Plan", href: "/app/plan", icon: Sparkles },
     { label: "Onboarding", href: "/app/setup", icon: SlidersHorizontal, badge: setupProgress === null ? null : `${setupProgress}%` },
     { label: "Analysis", href: "/app/analysis", icon: BarChart2 },
     { label: "Insights", href: "/app/insights", icon: TrendingUp },
