@@ -13,6 +13,7 @@ import {
   Moon,
   Shield,
   SlidersHorizontal,
+  TrendingUp,
   User,
   UtensilsCrossed,
   type LucideIcon,
@@ -34,13 +35,14 @@ type NavItem = {
 
 function primaryItems(setupProgress: number | null): NavItem[] {
   return [
-  { label: "Dashboard", href: "/app/dashboard", icon: LayoutDashboard },
-  { label: "Onboarding", href: "/app/setup", icon: SlidersHorizontal, badge: setupProgress === null ? null : `${setupProgress}%` },
-  { label: "Analysis", href: "/app/analysis", icon: BarChart2 },
-  { label: "Cycle Tracker", href: "/app/cycle", icon: Moon },
-  { label: "Meals & Nutrition", href: "/app/meals", icon: UtensilsCrossed },
-  { label: "Workout", href: "/app/workout", icon: Dumbbell },
-  { label: "Chat", href: "/app/chat", icon: MessageCircle },
+    { label: "Dashboard", href: "/app/dashboard", icon: LayoutDashboard },
+    { label: "Onboarding", href: "/app/setup", icon: SlidersHorizontal, badge: setupProgress === null ? null : `${setupProgress}%` },
+    { label: "Analysis", href: "/app/analysis", icon: BarChart2 },
+    { label: "Insights", href: "/app/insights", icon: TrendingUp },
+    { label: "Cycle Tracker", href: "/app/cycle", icon: Moon },
+    { label: "Meals & Nutrition", href: "/app/meals", icon: UtensilsCrossed },
+    { label: "Workout", href: "/app/workout", icon: Dumbbell },
+    { label: "Chat", href: "/app/chat", icon: MessageCircle },
   ];
 }
 
@@ -131,12 +133,12 @@ export function Sidebar() {
       >
         <div className="border-b border-hairline px-4 pb-4 pt-5 md:px-0 lg:px-4">
           <div className="flex items-center md:justify-center lg:justify-start">
-          <div className="hidden lg:block">
-            <KarigaiLogo size={20} tagline />
-          </div>
-          <div className="lg:hidden">
-            <Badge variant="default">K</Badge>
-          </div>
+            <div className="hidden lg:block">
+              <KarigaiLogo size={20} tagline />
+            </div>
+            <div className="lg:hidden">
+              <Badge variant="default">K</Badge>
+            </div>
           </div>
         </div>
 
@@ -165,19 +167,19 @@ export function Sidebar() {
             </button>
           ) : (
             <div className="px-4 md:px-3 lg:px-4">
-            <Button
-              onClick={() => {
-                close();
-                openModal("login");
-              }}
-              className="w-full"
-              size="md"
-              variant="accent"
-              title="Sign in"
-            >
-              <User className="size-4 shrink-0" aria-hidden="true" />
-              <span className="md:hidden lg:inline">Sign in</span>
-            </Button>
+              <Button
+                onClick={() => {
+                  close();
+                  openModal("login");
+                }}
+                className="w-full"
+                size="md"
+                variant="accent"
+                title="Sign in"
+              >
+                <User className="size-4 shrink-0" aria-hidden="true" />
+                <span className="md:hidden lg:inline">Sign in</span>
+              </Button>
             </div>
           )}
         </motion.nav>
