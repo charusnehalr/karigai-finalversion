@@ -134,14 +134,14 @@ export function Sidebar() {
         data-cursor-precise
       >
         <div className="border-b border-hairline px-4 pb-4 pt-5 md:px-0 lg:px-4">
-          <div className="flex items-center md:justify-center lg:justify-start">
+          <Link href="/" className="flex items-center md:justify-center lg:justify-start">
             <div className="hidden lg:block">
               <KarigaiLogo size={20} tagline />
             </div>
             <div className="lg:hidden">
               <Badge variant="default">K</Badge>
             </div>
-          </div>
+          </Link>
         </div>
 
         <motion.nav className="flex-1 space-y-1 py-4" variants={staggerContainer} initial="hidden" animate="visible">
