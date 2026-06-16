@@ -1,7 +1,15 @@
+"use client";
+
+import { QueryProvider } from "@/components/providers/QueryProvider";
+
 export default function AppLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="min-h-screen bg-paper">{children}</div>;
+  return (
+    <QueryProvider>
+      <div className="min-h-screen bg-paper">{children}</div>
+    </QueryProvider>
+  );
 }
